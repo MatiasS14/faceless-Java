@@ -2,7 +2,7 @@ package faceless;
 
 
 public class Texto extends Archivo{
-	Integer cantCaracteres;
+	private Integer cantCaracteres;
 		
 	public Texto(Integer cantidadCaract) {
 		this.cantCaracteres = cantidadCaract;
