@@ -1,4 +1,4 @@
-##Ejercicio 9: Faceless 
+Ejercicio 9: Faceless 
 Un grupo de inversores, que no quiere dar la cara, nos contrató para llevar a cabo una red social. Faceless permite a los usuarios publicar diferentes tipos de contenidos, los cuales incluyen texto, fotos y videos, entre otros. Por cuestiones de almacenamiento en los servidores, nos interesará saber cuánto espacio ocupa cada publicación, en KB: 
 •	Las fotos tienen un alto y ancho dado en pixels; el espacio que ocupan se calcula como (alto * ancho) * factor de compresión. El factor de compresión actual para las fotos es de 0.7, pero probablemente cambiará en el futuro. 
 •	Las publicaciones de texto son mucho más fáciles de calcular, ya que el espacio que ocupan es igual a la cantidad de caracteres que tiene.
