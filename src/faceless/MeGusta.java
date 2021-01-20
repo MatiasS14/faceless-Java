@@ -1,7 +1,7 @@
 package faceless;
 
 public class MeGusta {
-	Usuario usuario ;
+	private Usuario usuario ;
 	
 	public MeGusta(Usuario usuario) {
 		this.usuario = usuario;
