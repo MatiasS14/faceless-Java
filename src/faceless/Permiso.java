@@ -1,7 +1,5 @@
 package faceless;
 
-public class Permiso {
-	public Boolean puedeVerPublicacion(Usuario usuario) {
-		return true;
-	}
+public abstract class Permiso {
+	public abstract Boolean puedeVerPublicacion(Usuario usuario) ;
 }
