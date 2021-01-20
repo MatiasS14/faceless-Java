@@ -43,7 +43,7 @@ public class Usuario {
 	}
 	
 	public Set<Publicacion> publicacionesHechas(){
-		return this.faceless.publicacionesUsuario(this);//CHEQUEAR QUE PASA CON ESTO
+		return this.faceless.publicacionesUsuario(this);
 	}
 	
 	public Integer pesoPublicaciones() {
