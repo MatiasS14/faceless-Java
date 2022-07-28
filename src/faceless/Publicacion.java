@@ -1,5 +1,9 @@
 package faceless;
 import java.util.Set;
+
+import faceless.archivos.Archivo;
+import faceless.permisos.Permiso;
+
 import java.util.HashSet;
 
 public class Publicacion {

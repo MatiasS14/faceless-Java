@@ -1,5 +1,7 @@
-package faceless;
+package faceless.permisos;
 import java.util.Set;
+
+import faceless.Usuario;
 
 public class PermisoListaBlanca extends Permiso{
 	private Set<Usuario> usuarios;

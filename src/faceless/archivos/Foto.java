@@ -1,4 +1,4 @@
-package faceless;
+package faceless.archivos;
 
 public class Foto extends Archivo {
 	private Integer alto ;

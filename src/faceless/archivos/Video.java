@@ -1,4 +1,4 @@
-package faceless;
+package faceless.archivos;
 
 public class Video extends Archivo{
 	protected Integer segundosDuracion;

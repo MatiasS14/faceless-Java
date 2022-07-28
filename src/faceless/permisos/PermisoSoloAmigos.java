@@ -1,4 +1,6 @@
-package faceless;
+package faceless.permisos;
+
+import faceless.Usuario;
 
 public class PermisoSoloAmigos extends Permiso{
 	private Usuario usuario ;

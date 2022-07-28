@@ -1,4 +1,4 @@
-package faceless;
+package faceless.archivos;
 
 
 public class Texto extends Archivo{

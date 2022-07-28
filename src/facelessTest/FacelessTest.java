@@ -1,5 +1,15 @@
 package facelessTest;
 import faceless.*;
+import faceless.archivos.Archivo;
+import faceless.archivos.Foto;
+import faceless.archivos.Texto;
+import faceless.archivos.Video;
+import faceless.archivos.VideoHD;
+import faceless.permisos.PermisoListaBlanca;
+import faceless.permisos.PermisoListaNegra;
+import faceless.permisos.PermisoPublico;
+import faceless.permisos.PermisoSoloAmigos;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
