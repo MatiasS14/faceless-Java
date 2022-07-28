@@ -5,6 +5,7 @@ import faceless.archivos.Foto;
 import faceless.archivos.Texto;
 import faceless.archivos.Video;
 import faceless.archivos.VideoHD;
+import faceless.borrador.BorradorPublicacion;
 import faceless.permisos.PermisoListaBlanca;
 import faceless.permisos.PermisoListaNegra;
 import faceless.permisos.PermisoPublico;
@@ -46,6 +47,14 @@ class FacelessTest {
 	PermisoListaBlanca permisoListaBlanca;
 	PermisoListaNegra permisoListaNegra  ;
 	PermisoSoloAmigos permisoSoloAmigosPepe  ;
+	//Borradores Publicaciones
+	BorradorPublicacion borradorPublicacionPepe1  ;
+	BorradorPublicacion borradorPublicacionPepe2  ;
+	BorradorPublicacion borradorPublicacionPepe3  ;
+	BorradorPublicacion borradorPublicacionPepe4  ;
+	BorradorPublicacion borradorPublicacionLaura  ;
+	BorradorPublicacion borradorPublicacionMarcelo;
+	BorradorPublicacion borradorPublicacionCarla  ;
 	//Publicaciones
 	Publicacion publicacionPepe1  ;
 	Publicacion publicacionPepe2  ;
@@ -90,13 +99,20 @@ class FacelessTest {
 		permisoListaNegra  = new PermisoListaNegra(listaNegra)  	;//listaNegra de pepe
 		permisoSoloAmigosPepe  = new PermisoSoloAmigos(pepe);
 		//Publicaciones
+				//borradores publicaciones pepe
+		borradorPublicacionPepe1 = new BorradorPublicacion(pepe, foto1, permisoPublico);
+		borradorPublicacionPepe2 = new BorradorPublicacion(pepe, foto3, permisoListaBlanca);
+		borradorPublicacionPepe3 = new BorradorPublicacion(pepe, video, permisoListaNegra);
+		borradorPublicacionPepe4 = new BorradorPublicacion(pepe, texto3, permisoSoloAmigosPepe);
 				//publicaciones pepe
-		publicacionPepe1 = new Publicacion(pepe, foto1, permisoPublico);
-		publicacionPepe2 = new Publicacion(pepe, foto3, permisoListaBlanca);
-		publicacionPepe3 = new Publicacion(pepe, video, permisoListaNegra);
-		publicacionPepe4 = new Publicacion(pepe, texto3, permisoSoloAmigosPepe);
+		publicacionPepe1 = new Publicacion(borradorPublicacionPepe1);
+		publicacionPepe2 = new Publicacion(borradorPublicacionPepe2);
+		publicacionPepe3 = new Publicacion(borradorPublicacionPepe3);
+		publicacionPepe4 = new Publicacion(borradorPublicacionPepe4);
+				//borradores publicaciones laura
+		borradorPublicacionLaura = new BorradorPublicacion (laura, foto2, permisoPublico);
 				//publicacion laura
-		publicacionLaura = new Publicacion (laura, foto2, permisoPublico);
+		publicacionLaura = new Publicacion (borradorPublicacionLaura);
 	}
 	
 	@Test

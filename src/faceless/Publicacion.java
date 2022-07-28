@@ -2,6 +2,7 @@ package faceless;
 import java.util.Set;
 
 import faceless.archivos.Archivo;
+import faceless.borrador.BorradorPublicacion;
 import faceless.permisos.Permiso;
 
 import java.util.HashSet;
@@ -12,10 +13,10 @@ public class Publicacion {
 	private Permiso permiso     ;
 	private Set<MeGusta> meGustaRecibidos;
 	
-	public Publicacion(Usuario usuario, Archivo archivo, Permiso permiso) {
-		this.usuario = usuario               ;
-		this.archivo= archivo                ; 
-		this.permiso= permiso                ;
+	public Publicacion(BorradorPublicacion bPublicacion) {
+		this.usuario = bPublicacion.getUsuario()               ;
+		this.archivo= bPublicacion.getArchivo()                ; 
+		this.permiso= bPublicacion.getPermiso()                ;
 		this.meGustaRecibidos= new HashSet<MeGusta>();
 	}
 	
