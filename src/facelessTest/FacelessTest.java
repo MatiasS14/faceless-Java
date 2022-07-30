@@ -6,6 +6,7 @@ import faceless.archivos.Texto;
 import faceless.archivos.Video;
 import faceless.archivos.VideoHD;
 import faceless.borrador.BorradorPublicacion;
+import faceless.borrador.BorradorUsuario;
 import faceless.permisos.PermisoListaBlanca;
 import faceless.permisos.PermisoListaNegra;
 import faceless.permisos.PermisoPublico;
@@ -21,6 +22,14 @@ import java.util.HashSet;
 class FacelessTest {
 	//Faceless
 	Faceless faceless;
+	//Borradores Usuarios
+	BorradorUsuario	borradorPepe        ;
+	BorradorUsuario	borradorMartin      ;
+	BorradorUsuario borradorLaura       ;
+	BorradorUsuario borradorFlorencia   ;
+	BorradorUsuario borradorMarcelo     ;
+	BorradorUsuario borradorAdrian      ;
+	BorradorUsuario borradorCarla       ;
 	//Usuarios	
 	Usuario pepe     		; 
 	Usuario martin   		;
@@ -68,14 +77,22 @@ class FacelessTest {
 	public void setup() {
 		//Instancia de faceless
 		faceless    = new Faceless()       	;
+		//Borradores Usuarios
+		borradorPepe        = new BorradorUsuario(faceless)	;
+		borradorMartin      = new BorradorUsuario(faceless)	;
+		borradorLaura       = new BorradorUsuario(faceless)	;
+		borradorFlorencia   = new BorradorUsuario(faceless)	;
+		borradorMarcelo     = new BorradorUsuario(faceless)	;
+		borradorAdrian      = new BorradorUsuario(faceless)	;
+		borradorCarla       = new BorradorUsuario(faceless)	;
 		//Algunos usuarios
-		pepe        = new Usuario(faceless)	;
-		martin      = new Usuario(faceless)	;
-		laura       = new Usuario(faceless)	;
-		florencia   = new Usuario(faceless)	;
-		marcelo     = new Usuario(faceless)	;
-		adrian      = new Usuario(faceless)	;
-		carla       = new Usuario(faceless)	;
+		pepe        = new Usuario(borradorPepe)	;
+		martin      = new Usuario(borradorMartin)	;
+		laura       = new Usuario(borradorLaura)	;
+		florencia   = new Usuario(borradorFlorencia)	;
+		marcelo     = new Usuario(borradorMarcelo)	;
+		adrian      = new Usuario(borradorAdrian)	;
+		carla       = new Usuario(borradorCarla)	;
 		//Inicializacion de listas blanca y negra
 		//para los permisos
 		listaBlanca = new HashSet<Usuario>();

@@ -1,5 +1,8 @@
 package faceless;
 import java.util.Set;
+
+import faceless.borrador.BorradorUsuario;
+
 import java.util.HashSet;
 
 public class Usuario {
@@ -7,11 +10,11 @@ public class Usuario {
 	private MeGusta meGusta;
 	private Set<Usuario> amigos ;
 	
-	
-	public Usuario(Faceless face) {
-		this.faceless = face;
+	//CAMBIAR EL USUARIO??
+	public Usuario(BorradorUsuario usuario) {
+		this.faceless = usuario.faceless;
 		this.meGusta= new MeGusta(this);
-		this.amigos = new HashSet<Usuario>();
+		this.amigos = usuario.amigos;
 		this.faceless.nuevoUsuario(this);
 	}
 	
