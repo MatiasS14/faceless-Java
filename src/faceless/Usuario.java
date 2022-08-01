@@ -1,6 +1,7 @@
 package faceless;
 import java.util.Set;
 
+import faceless.Errores.ErrorUsuario;
 import faceless.borrador.BorradorUsuario;
 
 import java.util.HashSet;
@@ -10,7 +11,7 @@ public class Usuario {
 	private MeGusta meGusta;
 	private Set<Usuario> amigos ;
 	
-	//CAMBIAR EL USUARIO??
+
 	public Usuario(BorradorUsuario usuario) {
 		this.faceless = usuario.faceless;
 		this.meGusta= new MeGusta(this);
@@ -22,7 +23,7 @@ public class Usuario {
 		this.faceless.recibirPublicacion(pub);
 	}
 	
-	public void darMeGusta(Publicacion pub) {
+	public void darMeGusta(Publicacion pub) throws ErrorUsuario{
 		if(pub.dejarVerPublicacion(this)) {
 		pub.recibirMeGusta(this.meGusta);
 		}else {

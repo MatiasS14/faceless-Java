@@ -1,5 +1,6 @@
 package facelessTest;
 import faceless.*;
+import faceless.Errores.ErrorUsuario;
 import faceless.archivos.Archivo;
 import faceless.archivos.Foto;
 import faceless.archivos.Texto;
@@ -236,7 +237,7 @@ class FacelessTest {
 	}
 	
 	@Test
-	void testMeGusta() {
+	void testMeGusta() throws ErrorUsuario {
 		//pepe agrega amigos
 		pepe.agregarAmigo(martin);
 		pepe.agregarAmigo(laura);

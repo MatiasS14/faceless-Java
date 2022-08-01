@@ -1,6 +1,7 @@
 package faceless;
 import java.util.Set;
 
+import faceless.Errores.ErrorPublicacion;
 import faceless.archivos.Archivo;
 import faceless.borrador.BorradorPublicacion;
 import faceless.permisos.Permiso;
@@ -20,8 +21,15 @@ public class Publicacion {
 		this.meGustaRecibidos= new HashSet<MeGusta>();
 	}
 	
-	public void publicar() {
+	public void publicar() throws ErrorPublicacion{
+		verificarValidez();
 		this.usuario.realizarPublicacion(this);
+	}
+	
+	private void verificarValidez() throws ErrorPublicacion{
+		if(this.usuario == null) {throw new ErrorPublicacion("Usuario invalido");};
+		if(this.archivo == null) {throw new ErrorPublicacion("Seleccionar archivo");};
+		if(this.permiso == null) {throw new ErrorPublicacion("Elegir permiso");};
 	}
 	
 	public void recibirMeGusta(MeGusta megusta) {
